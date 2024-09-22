@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+        .questao {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #49e05d;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+#language-list {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+#language-list li {
+    margin: 0.5rem 0;
+}
+
+#language-list a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+#exercise-container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#submit-answer {
+    padding:11px 22px;
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#submit-answer:hover {
+    background-color: #45a049;
+}
+    </style>
+</head>
+<body>
+
+<h1>Atividade: Complete as frases abaixo</h1>
+
+<div class="questao">
+    <p>1. Eu tenho um ______ </p>
+    <img src="celular.jpg">
+    <br>
+    <button onclick="verificar('errado', 1)">Aluno</button>
+    <button onclick="verificar('errado', 1)">Cachorro</button>
+    <button onclick="verificar('certo', 1)">Celular</button>
+    <button onclick="verificar('errado', 1)">Garrafa</button>
+</div>
+
+<div class="questao">
+    <p>2. Eu _____ uma bolsa comigo </p>
+    <p2>Dica:semelhante a trouxe</p2>
+    <br>
+    <button onclick="verificar('errado', 2)">Sonhei</button>
+    <button onclick="verificar('errado', 2)">Irei</button>
+    <button onclick="verificar('certo', 2)">Levei</button>
+    <button onclick="verificar('errado', 2)">Roubei</button>
+</div>
+
+<div class="resultado" id="resultado"></div>
+
+<script>
+    const respostasCorretas = {
+        1: 'certo',
+        2: 'certo'
+    };
+
+    let pontuacao = 0;
+
+    function verificar(resposta, pergunta) {
+        if (resposta === respostasCorretas[pergunta]) {
+            pontuacao++;
+            alert("Você acertou!");
+        } else {
+            alert("Você errou.");
+        }
+        if (pergunta === 2) {
+            mostrarResultado();
+        }
+    }
+
+    function mostrarResultado() {
+        const resultadoDiv = document.getElementById('resultado');
+        resultadoDiv.textContent = `Você acertou ${pontuacao} de ${Object.keys(respostasCorretas).length} perguntas.`;
+        pontuacao = 100; // Reiniciar pontuação para a próxima rodada
+    }
+</script>
+
+</body>
+</html>

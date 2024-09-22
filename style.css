@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #49e05d;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1{
+    size: 20px;
+    color: #49e05d;
+    text-align: center;
+}
+
+#language-list {
+    list-style-type: none;
+    padding: 0;
+   
+    
+
+}
+
+#language-list li {
+    margin: 0.5rem 0;
+}
+
+#language-list a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+#exercise-container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#submit-answer {
+    padding:11px 22px;
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#submit-answer:hover {
+    background-color: #45a049;
+}
